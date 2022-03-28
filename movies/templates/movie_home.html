@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UzMovi HomePage</title>
+</head>
+<body>
+    {% for movie in movies %}
+    <img src="{% if movie.banner %}{{movie.banner.url}}{% else %}https://media.moddb.
+    com/images/articles/1/73/72743/image_error_full.png{% endif %}" />
+    <h3>{{movie.title}}</h3>
+    <p>{{movie.duration}}|{{movie.country}}|{{movie.language}}</p>
+    {% endfor %}
+</body>
+</html>
